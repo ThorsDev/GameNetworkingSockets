@@ -64,6 +64,8 @@ set(useCryptoOptions OpenSSL libsodium BCrypt)
 set(USE_CRYPTO "OpenSSL" CACHE STRING "Crypto library to use for AES/SHA256")
 set_property(CACHE USE_CRYPTO PROPERTY STRINGS ${useCryptoOptions})
 
+find_package(Protobuf REQUIRED CONFIG PATHS "${Protobuf_DIR}" NO_DEFAULT_PATH)
+
 list(FIND useCryptoOptions "${USE_CRYPTO}" useCryptoIndex)
 if(useCryptoIndex EQUAL -1)
 	message(FATAL_ERROR "USE_CRYPTO must be one of: ${useCryptoOptions}")
