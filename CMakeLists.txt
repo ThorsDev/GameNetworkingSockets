@@ -63,6 +63,11 @@ set_target_properties(protobuf::libprotobuf PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${Protobuf_INCLUDE_DIR}
 )
 
+add_executable(Protobuf::protoc IMPORTED)
+set_target_properties(Protobuf::protoc PROPERTIES
+    IMPORTED_LOCATION ${Protobuf_PROTOC_EXECUTABLE}
+)
+
 include(${Protobuf_MODULE_PATH}/protobuf-module.cmake)
 include(${Protobuf_MODULE_PATH}/protobuf-generate.cmake)
 
