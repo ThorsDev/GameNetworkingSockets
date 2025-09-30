@@ -57,6 +57,9 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 	print_default_msvc_flags()
 endif()
 
+include(${Protobuf_MODULE_PATH}/protobuf-module.cmake)
+include(${Protobuf_MODULE_PATH}/protobuf-generate.cmake)
+
 #
 # Primary crypto library (for AES, SHA256, etc)
 #
