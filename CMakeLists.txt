@@ -68,7 +68,10 @@ endif()
     # IMPORTED_LOCATION ${Protobuf_PROTOC_EXECUTABLE}
 # )
 
-find_package(Protobuf REQUIRED CONFIG PATHS "${Protobuf_DIR}" NO_DEFAULT_PATH)
+# find_package(Protobuf REQUIRED CONFIG PATHS "${Protobuf_DIR}" NO_DEFAULT_PATH)
+
+include(${Protobuf_MODULE_PATH}/libprotobuf.cmake)
+include(${Protobuf_MODULE_PATH}/libprotoc.cmake)
 
 include(${Protobuf_MODULE_PATH}/protobuf-module.cmake)
 include(${Protobuf_MODULE_PATH}/protobuf-generate.cmake)
