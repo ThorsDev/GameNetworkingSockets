@@ -70,6 +70,8 @@ endif()
 
 # find_package(Protobuf REQUIRED CONFIG PATHS "${Protobuf_DIR}" NO_DEFAULT_PATH)
 
+include(${Protobuf_MODULE_PATH}/protobuf-configure-target.cmake)
+include(${Protobuf_MODULE_PATH}/libprotobuf.cmake)
 include(${Protobuf_MODULE_PATH}/libprotobuf.cmake)
 include(${Protobuf_MODULE_PATH}/libprotoc.cmake)
 
