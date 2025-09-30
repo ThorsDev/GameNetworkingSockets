@@ -7,11 +7,11 @@ include(GNUInstallDirs)
 find_package(Threads REQUIRED)
 
 set(GNS_COMMON_PROTOS
-	"common/steamnetworkingsockets_messages_certs.proto"
-	"common/steamnetworkingsockets_messages.proto"
+	"${CMAKE_CURRENT_SOURCE_DIR}/common/steamnetworkingsockets_messages_certs.proto"
+	"${CMAKE_CURRENT_SOURCE_DIR}/common/steamnetworkingsockets_messages.proto"
 	)
 set(GNS_CLIENTLIB_PROTOS
-	"common/steamnetworkingsockets_messages_udp.proto"
+	"${CMAKE_CURRENT_SOURCE_DIR}/common/steamnetworkingsockets_messages_udp.proto"
 	)
 
 set(GNS_COMMON_SRCS
