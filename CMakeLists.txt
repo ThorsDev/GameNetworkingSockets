@@ -57,6 +57,12 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 	print_default_msvc_flags()
 endif()
 
+add_library(protobuf::libprotobuf UNKNOWN IMPORTED)
+set_target_properties(protobuf::libprotobuf PROPERTIES
+    IMPORTED_LOCATION ${Protobuf_LIBRARIES}
+    INTERFACE_INCLUDE_DIRECTORIES ${Protobuf_INCLUDE_DIR}
+)
+
 include(${Protobuf_MODULE_PATH}/protobuf-module.cmake)
 include(${Protobuf_MODULE_PATH}/protobuf-generate.cmake)
 

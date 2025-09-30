@@ -165,12 +165,8 @@ protobuf_generate_cpp(GNS_CLIENTLIB_PROTO_SRCS GNS_CLIENTLIB_PROTO_HDRS ${GNS_CL
 
 function(gns_set_target_protobuf_properties TGT )
 	target_link_libraries(${TGT} PUBLIC
-		${Protobuf_LIBRARIES}
+		protobuf::libprotobuf
 		Threads::Threads
-		)
-	
-	target_include_directories(${TGT} PUBLIC
-		${Protobuf_INCLUDE_DIR}
 		)
 endfunction()
 
