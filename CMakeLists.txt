@@ -57,27 +57,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 	print_default_msvc_flags()
 endif()
 
-# add_library(protobuf::libprotobuf UNKNOWN IMPORTED)
-# set_target_properties(protobuf::libprotobuf PROPERTIES
-    # IMPORTED_LOCATION ${Protobuf_LIBRARIES}
-    # INTERFACE_INCLUDE_DIRECTORIES ${Protobuf_INCLUDE_DIR}
-# )
-
-# add_executable(Protobuf::protoc IMPORTED)
-# set_target_properties(Protobuf::protoc PROPERTIES
-    # IMPORTED_LOCATION ${Protobuf_PROTOC_EXECUTABLE}
-# )
-
-# find_package(Protobuf REQUIRED CONFIG PATHS "${Protobuf_DIR}" NO_DEFAULT_PATH)
-
-include(${Protobuf_MODULE_PATH}/protobuf-configure-target.cmake)
-include(${Protobuf_MODULE_PATH}/libprotobuf.cmake)
-include(${Protobuf_MODULE_PATH}/libprotobuf.cmake)
-include(${Protobuf_MODULE_PATH}/libprotoc.cmake)
-
-include(${Protobuf_MODULE_PATH}/protobuf-module.cmake)
-include(${Protobuf_MODULE_PATH}/protobuf-generate.cmake)
-
 #
 # Primary crypto library (for AES, SHA256, etc)
 #
